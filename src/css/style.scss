@@ -1,0 +1,17 @@
+.main {
+    padding: 0;
+    margin: 0;
+    ~ .wrapper {
+        display: flex;
+    }
+}
+
+.banner {
+    .container {
+        ul {
+            li:last-child {
+                visibility: hidden;
+            }
+        }
+    }
+}
