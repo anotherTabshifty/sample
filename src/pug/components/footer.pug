@@ -1,4 +1,13 @@
 footer 
-    div.contaniner
-        p hello 
-        p world
+    div.container
+        p.social
+            each item in ['instagram', 'linkedin', 'facebook', 'twitter']
+                a(class="icon icon-"+ item target="_blank" href="#")
+        div.split-line
+    
+        div.footer-text
+            p.left-text Left text - Lorem Ipsum Dolot Sit
+            p.about
+                each item in ['About', 'Sponsor', 'Programs', 'Blog', 'Press', 'Privacy Policy', 'Contact']
+                    a(href="#" target="_blank")= item
+            p.placeholder

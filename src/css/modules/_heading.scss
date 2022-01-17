@@ -1,0 +1,57 @@
+.sub-heading {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 104px 50px;
+  background-color: $cream;
+  overflow: hidden;
+  @include flex-center;
+  .left-part {
+    width: 440px;
+    margin-right: 50px;
+    color: $blue;
+    .subtitle {
+      font-family: $f-am;
+      font-size: 14px;
+      line-height: 32px;
+    }
+    .heading-text {
+      font-family: Argent CF;
+      font-size: 64px;
+      line-height: 64px;
+    }
+    .summary {
+      font-family: Proxima Nova;
+      width: 300px;
+      margin-top: 43px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }  
+  .right-part { 
+    width: 520px;
+    margin-left: 50px;
+    .img-frame {
+      position: relative;
+      width: 100%;
+      padding-bottom: 85.4%;
+      img{
+        position: absolute;
+        width: 48%;
+        &:first-child {
+          top: 0;
+          left: 0;
+        }
+        &:last-child {
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+    @media screen and (max-width: $md-max){
+      width: 100%;
+      max-width: 520px;
+      margin-left: 0;
+      margin-top: 90px;
+    }
+  }
+}

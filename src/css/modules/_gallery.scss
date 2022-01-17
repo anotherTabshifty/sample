@@ -1,0 +1,81 @@
+
+section.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width:88.88%;
+  margin: 90px auto 0 auto;
+  .gallery-headline {
+    font-family: Argent CF;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    color: #121950;
+    width: 100%;
+  }
+  
+  .gallery-box {
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    margin-top: 64px;
+    justify-content: space-between;
+  }
+  
+  .gallery-item {
+    width: 32%;
+    img {
+      width: 100%;
+    }
+    p {
+      text-align: center;
+      color: $blue;
+    }
+    .product-name {
+      margin-top: 24px;
+      font-family: $f-gsd;
+      font-size: 20px;
+      line-height: 24px;
+      text-decoration-line: underline;
+    }
+    .product-summary {
+      font-family: $f-pn;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .detail {
+      font-family: $f-pn;
+      font-size: 14px;
+      line-height: 20px;
+      opacity: .5;
+    }
+  }
+  .action-wrapper {
+    width: 100%;
+    text-align: center;
+  }
+
+  .action {
+    display: inline-block;
+    margin-top: 55px;
+    text-align: center;
+    background: $primary-orange;
+    color: $white;
+    border-radius: 40px;
+    padding: 12px 40px;
+    @include bg-hover;
+    span {
+      font-family: $f-mn;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 100;
+    }
+    &:hover{
+      background-color: $blue;
+    }
+  }
+}
+
+
+

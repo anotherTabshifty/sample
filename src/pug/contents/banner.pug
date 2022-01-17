@@ -1,9 +1,11 @@
+- var length = 4;
 section.banner 
-    div.container
-        ul
-            li: img(src="https://picsum.photos/seed/picsum/800/400")
-            li: img(src="https://picsum.photos/seed/picsum/800/400")
-            li: img(src="https://picsum.photos/seed/picsum/800/400")
-            li: img(src="https://picsum.photos/seed/picsum/800/400")
-            li: img(src="https://picsum.photos/seed/picsum/800/400")
-            li.wow.animate__bounceInUp: img(src="https://picsum.photos/seed/picsum/800/400")
+    //- ul.swiper-btn
+    //-     - for (var n = 0; n < length; n++)
+    //-         li.hover-hand= ''
+    div.swiper
+        each item in ['./images/hero-01_2x.jpg', './images/hero-01_2x.jpg', './images/hero-01_2x.jpg', './images/hero-01_2x.jpg']
+            div.swiper-item(style="background:url("+item+") top right/cover;")
+                div.heading-text
+                    h1.text This is a main heading
+                    a(href="#" target="_blank").action Call to action

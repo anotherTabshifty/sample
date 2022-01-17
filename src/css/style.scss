@@ -1,17 +1,25 @@
-.main {
-    padding: 0;
-    margin: 0;
-    ~ .wrapper {
-        display: flex;
-    }
-}
+@import '../fonts/stylesheet.css';
+@import '../iconfont/style.css';
+@import './common/variable';
+@import'./common/mixins';
 
-.banner {
-    .container {
-        ul {
-            li:last-child {
-                visibility: hidden;
-            }
-        }
-    }
-}
+@import '../../node_modules/scss-reset/reset';
+@import './common/global';
+// @import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+@import './components/footer';
+@import './components/header';
+
+@import './modules/banner';
+@import './modules/gallery';
+@import './modules/heading';
+@import './modules/quote';
+
+
+// font-family: Arimo;
+// font-size: 14px;
+// font-style: normal;
+// font-weight: 700;
+// line-height: 32px;
+// letter-spacing: 0.08em;
+// text-align: left;

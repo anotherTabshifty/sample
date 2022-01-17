@@ -1,0 +1,11 @@
+@mixin flex-center {
+  justify-content: center;
+  align-items: center;
+}
+@mixin bg-hover($timer:200ms, $effect:ease-in-out) {
+  transition: background-color $timer $effect;
+}
+
+@mixin animate($property, $timer:200ms, $effect:ease-in-out) {
+  transition: $property $timer $effect;
+}

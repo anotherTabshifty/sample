@@ -1,0 +1,67 @@
+section.banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  .swiper {
+    width: 100%;
+    position: relative;
+    font-size: 0; //  temp
+  }
+  .swiper-item {
+    display: inline-block;
+    width: 25%;
+    height: 468px;
+    overflow: hidden;
+    .heading-text {
+      margin-top: 118px;
+      margin-left: 5.83%;
+      .text{
+        font-family: $f-ac;
+        width: 500px;
+        font-size: 64px;
+        line-height: 64px;
+        color: $white;
+      }
+    }
+    .action {
+      font-family: $f-mn;
+      font-weight: 100;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 8px 32px;
+      background: $blue;
+      color: $white;
+      border-radius: 40px;
+      text-align: center;
+      display: inline-block;
+      margin-top:56px;
+      @include bg-hover;
+      &:hover {
+        background-color: $red;
+      }
+    }
+  }
+
+  .slick-dots {
+    bottom: 19%;
+    left: 5.83%;
+    position: absolute;
+    margin-top: 32px;
+    z-index: 10;
+  }
+  .slick-dots  li{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid $white;
+    border-radius: 6px;
+    margin-right: 8px;
+    cursor: pointer;
+    button {
+      display: none;
+    }
+    &:hover, &.slick-active {
+      background-color: $white;
+    }
+  }
+}

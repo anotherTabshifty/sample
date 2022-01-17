@@ -1,10 +1,14 @@
 doctype html
-- var title = "Homepage"
-include components/head.pug
+html 
+    - var title = "Tech"
+    include components/head.pug
 
-body 
-    include components/header.pug
-    div.content
+    body 
+        include components/header.pug
         include contents/banner.pug
-    include components/footer.pug
-    include components/script.pug
+        include contents/heading.pug
+        include contents/gallery.pug
+        hr.split-line
+        include contents/quote.pug
+        include components/footer.pug
+        include components/script.pug

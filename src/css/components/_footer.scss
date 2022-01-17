@@ -1,0 +1,75 @@
+footer {
+  background-color: $blue;
+  display: flex;
+  @include flex-center;
+  padding: 98px 0 96px 0;
+  .container {
+    width: 88.8%;
+  }
+  p.social {
+    text-align: center;
+  }
+
+  a.icon {
+    display: inline-block;
+    width: 20px;
+    height: 21px;
+    margin: 0 8px;
+    &.icon-facebook {
+      width: 11px;
+      height: 21px;
+      margin: 0 6px;
+    }
+    &.icon-twitter {
+      width: 21px;
+      height: 17px;
+    }
+    &:hover {
+      color: $red
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+div.split-line {
+  width: 100%;
+  background-color: #FFF1ED;
+  height: 1px;
+  margin: 30px 0;
+}
+
+div.footer-text {
+  font-family: Proxima Nova;
+  color: #FFF1ED;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+p.left-text {
+  font-size: 12px;
+  width: 27.5%;
+}
+p.about {
+  font-size: 16px;
+  line-height: 20px;
+  width: 45%;
+  text-align: center;
+}
+
+p.about>a {
+  color: #FFF1ED;
+  margin: 0 5px;
+}
+p.placeholder {
+  width: 27.5%;
+}

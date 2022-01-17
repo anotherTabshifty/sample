@@ -1,0 +1,11 @@
+section.gallery
+  h3.gallery-headline Another sub heading
+  div.gallery-box
+    each item in ["./images/gallery-01_2x.jpg","./images/gallery-01_2x.jpg","./images/gallery-01_2x.jpg"]
+      div.gallery-item
+        img(src=item alt="gallery")
+        p.product-name Product description across one or two lines
+        p.product-summary Product summary across one or two lines
+        p.detail 2 colours, 1 size
+  div.action-wrapper
+    div.action.hover-hand: span View all our merch

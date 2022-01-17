@@ -1,0 +1,33 @@
+.quote {
+  width: 100%;
+  margin-bottom: 90px;
+  .container {
+    text-align: center;
+    width: 88.88%;
+    margin: 0 auto;
+    color: $blue;
+    .text {
+      font-family: $f-ac;
+      font-style: italic;
+      font-size: 36px;
+      line-height: 48px;
+      width: 56%;
+      margin: 24px auto 40px auto;
+    }
+    .user-avatar{
+      img {
+        vertical-align: middle;
+        width: 54px;
+        height: 54px;
+      }
+      span {
+        font-family: $f-pn;
+        margin-left: 16px;
+        vertical-align: middle;
+        font-style: italic;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+}

@@ -1,5 +1,24 @@
 header
-    nav 
+    div.promotion
+        span.message This is a test project - lorem ipsum dolor sit amet
+        
+    nav.nav-menu
+        div.container
+            div.logo: a(href="index.html")
+                img(src="./images/logo.svg")
+            div.menus
+                ul
+                    - for (var x = 0; x < 7; x++)
+                        li: a(href='#')= 'Menu item' + ' ' + (x + 1)
+            div.actions.hover-hand
+                span.call Call to action
+                span.icon.icon-Union
+            
+            div.expand-menu.hover-hand 
+                span 
+                span 
+                span
+    div.responsive-menus
         ul
-            each item in ['SERVICES','ABOUT','INSIGHTS','DOCUMENTS','CONTACT']
-                li: a(href="google.com")= item
+            - for (var x = 0; x < 7; x++)
+                li: a(href='#')= 'Menu item' + ' ' + (x + 1)
