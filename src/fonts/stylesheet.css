@@ -68,3 +68,17 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Arimo';
+    src: url('Arimo-Bold.eot');
+    src: local('Arimo Bold'), local('Arimo-Bold'),
+        url('Arimo-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Arimo-Bold.woff2') format('woff2'),
+        url('Arimo-Bold.woff') format('woff'),
+        url('Arimo-Bold.ttf') format('truetype'),
+        url('Arimo-Bold.svg#Arimo-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

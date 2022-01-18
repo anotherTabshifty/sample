@@ -1,9 +1,10 @@
 section.gallery
-  h3.gallery-headline Another sub heading
-  div.gallery-box
+  h3.gallery-headline.wow.animate__fadeInUp.animate__animated Another sub heading
+  div.gallery-box.hide-content
     each item in ["./images/gallery-01_2x.jpg","./images/gallery-01_2x.jpg","./images/gallery-01_2x.jpg"]
-      div.gallery-item
-        img(src=item alt="gallery")
+      div.gallery-item.wow.animate__fadeInUp.animate__animated
+        a.img-wrapper(href="#" target="_blank")
+          img(src=item alt="gallery")
         p.product-name Product description across one or two lines
         p.product-summary Product summary across one or two lines
         p.detail 2 colours, 1 size

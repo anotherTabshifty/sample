@@ -12,15 +12,38 @@ section.banner {
     width: 25%;
     height: 468px;
     overflow: hidden;
+    @media screen and (min-width:$md-min) and (max-width: $lg-max) {
+      height: 400px;
+    }
+    @media screen and(max-width: $md-max) {
+      position: relative;
+      height: 350px;
+    }
     .heading-text {
       margin-top: 118px;
       margin-left: 5.83%;
+      @media screen and (min-width:$md-min) and (max-width: $lg-max) {
+        margin-top: 88px;
+        margin-left: 8%;
+      }
+      @media screen and(max-width: $md-max) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+      }
       .text{
         font-family: $f-ac;
         width: 500px;
         font-size: 64px;
         line-height: 64px;
         color: $white;
+        @media screen and(max-width: $md-max) {
+          font-size: 56px;
+          line-height: 56px;
+          width: 400px;
+        }
       }
     }
     .action {
@@ -36,6 +59,12 @@ section.banner {
       display: inline-block;
       margin-top:56px;
       @include bg-hover;
+      @media screen and (min-width:$md-min) and (max-width: $lg-max) {
+        margin-top: 48px;
+      }
+      @media screen and(max-width: $md-max) {
+        margin-top:30px;
+      }
       &:hover {
         background-color: $red;
       }
@@ -48,6 +77,17 @@ section.banner {
     position: absolute;
     margin-top: 32px;
     z-index: 10;
+    @media screen and (min-width:$md-min) and (max-width: $lg-max) {
+      bottom: 16%;
+      left: 8%;
+    }
+    @media screen and(max-width: $md-max) {
+      margin-top:30px;
+      bottom: 15%;
+      left: 50%;
+      width: 400px;
+      transform: translateX(-50%);
+    }
   }
   .slick-dots  li{
     display: inline-block;

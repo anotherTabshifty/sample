@@ -6,6 +6,12 @@ section.gallery {
   align-items: center;
   width:88.88%;
   margin: 90px auto 0 auto;
+  @media screen and (max-width:$md-max) {
+    width:88.88%;
+    max-width: 480px;
+    margin: 50px auto 0 auto;
+  }
+  
   .gallery-headline {
     font-family: Argent CF;
     font-size: 40px;
@@ -13,6 +19,10 @@ section.gallery {
     text-align: center;
     color: #121950;
     width: 100%;
+    @media screen and (max-width:$md-max) {
+      font-size: 30px;
+      line-height: 36px;
+    }
   }
   
   .gallery-box {
@@ -21,12 +31,31 @@ section.gallery {
     display: flex;
     margin-top: 64px;
     justify-content: space-between;
+    @media screen and (max-width:$md-max) {
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+    
   }
   
   .gallery-item {
     width: 32%;
+    overflow: hidden;
+    @media screen and (max-width:$md-max) {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .img-wrapper {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+    }
     img {
       width: 100%;
+      @include animate(transform, 200ms);
+      &:hover {
+        transform: scale(1.2);
+      }
     }
     p {
       text-align: center;
@@ -38,17 +67,30 @@ section.gallery {
       font-size: 20px;
       line-height: 24px;
       text-decoration-line: underline;
+      @media screen and (max-width:$md-max) {
+        margin-top: 12px;
+        font-size: 20px;
+        line-height: 24px;
+      }
     }
     .product-summary {
       font-family: $f-pn;
       font-size: 16px;
       line-height: 24px;
+      @media screen and (max-width:$md-max) {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
     .detail {
       font-family: $f-pn;
       font-size: 14px;
       line-height: 20px;
       opacity: .5;
+      @media screen and (max-width:$md-max) {
+        font-size: 14px;
+        line-height: 20px;
+      }
     }
   }
   .action-wrapper {

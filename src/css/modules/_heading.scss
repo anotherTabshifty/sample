@@ -3,14 +3,20 @@
   flex-wrap: wrap;
   padding: 104px 50px;
   background-color: $cream;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: right bottom;
   overflow: hidden;
   @include flex-center;
+  @media screen and(max-width: $md-max) {
+    background-size: 100%;
+  }
   .left-part {
     width: 440px;
-    margin-right: 50px;
     color: $blue;
     .subtitle {
       font-family: $f-am;
+      font-weight: 700;
       font-size: 14px;
       line-height: 32px;
     }
@@ -29,7 +35,7 @@
   }  
   .right-part { 
     width: 520px;
-    margin-left: 50px;
+    margin-left: 100px;
     .img-frame {
       position: relative;
       width: 100%;
@@ -47,11 +53,17 @@
         }
       }
     }
-    @media screen and (max-width: $md-max){
+    @media screen and (max-width: $lg-max){
       width: 100%;
       max-width: 520px;
       margin-left: 0;
-      margin-top: 90px;
+      margin-top: 80px;
+    }
+    @media screen and (min-width: $lg-min)and (max-width: $xl-max){
+      width: 45%;
+      max-width: 520px;
+      margin-left: 50px;
+      // margin-top: 80px;
     }
   }
 }
