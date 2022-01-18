@@ -26,6 +26,7 @@ footer {
     }
     &:hover {
       &::before {
+        @include animate(color);
         color: $red
       }
     }
@@ -77,6 +78,10 @@ footer {
       a {
         color: $cream;
         margin: 0 5px;
+        @include animate(color);
+        &:hover {
+          color: $primary-orange;
+        }
         &:first-child {
           margin-left: 0;
         }

@@ -9,7 +9,7 @@ header
             div.menus
                 ul
                     - for (var x = 0; x < 7; x++)
-                        li: a(href='#')= 'Menu item' + ' ' + (x + 1)
+                        li: a(href='#'): span= 'Menu item' + ' ' + (x + 1)
             div.actions.hover-hand
                 span.call Call to action
                 span.icon.icon-Union

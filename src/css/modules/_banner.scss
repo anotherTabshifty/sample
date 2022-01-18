@@ -32,6 +32,7 @@ section.banner {
         left: 50%;
         transform: translate(-50%, -50%);
         margin: 0;
+        margin-top: -10px;
       }
       .text{
         font-family: $f-ac;
@@ -57,10 +58,10 @@ section.banner {
       border-radius: 40px;
       text-align: center;
       display: inline-block;
-      margin-top:56px;
+      margin-top: 50px;
       @include bg-hover;
       @media screen and (min-width:$md-min) and (max-width: $lg-max) {
-        margin-top: 48px;
+        margin-top: 44px;
       }
       @media screen and(max-width: $md-max) {
         margin-top:30px;

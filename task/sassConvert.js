@@ -27,6 +27,3 @@ function minfyCss() {
 }
 exports.buildSass = buildSass;
 exports.minfyCss = minfyCss
-// exports.watch = function () {
-//   gulp.watch('./sass/**/*.scss', ['sass']);
-// };

@@ -1,15 +1,18 @@
 .sub-heading {
-  display: flex;
-  flex-wrap: wrap;
   padding: 104px 50px;
   background-color: $cream;
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: right bottom;
-  overflow: hidden;
-  @include flex-center;
   @media screen and(max-width: $md-max) {
     background-size: 100%;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden;
+    @include flex-center;
   }
   .left-part {
     width: 440px;
@@ -21,12 +24,13 @@
       line-height: 32px;
     }
     .heading-text {
-      font-family: Argent CF;
+      font-family: $f-ac;
       font-size: 64px;
       line-height: 64px;
+      margin-top: 10px;
     }
     .summary {
-      font-family: Proxima Nova;
+      font-family: $f-pn;
       width: 300px;
       margin-top: 43px;
       font-size: 20px;
@@ -63,7 +67,6 @@
       width: 45%;
       max-width: 520px;
       margin-left: 50px;
-      // margin-top: 80px;
     }
   }
 }

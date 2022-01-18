@@ -1,34 +1,16 @@
 const { parallel,src, dest, watch } = require('gulp')
-const { pug2html } = require(`./task/pugConvert`)
 const browserSync = require('browser-sync').create()
-const { buildSass } = require('./task/sassConvert')
-/* no production task here */
-function transferJs() {
-    return src(['./src/js/*.js','./src/js/**/*.js'])
-    .pipe(dest('./dist/preview/js'))
-}
+const { pug2html, minify } = require(`./task/pugConvert`)
+const { buildSass, minfyCss } = require('./task/sassConvert')
+const {uglifyJs, transferJs} = require('./task/jsTransfer')
+const {assetsTransfer, transferFonts, transferIconfont, transferImages} = require('./task/assetTransfer')
 
-function transferIconfont() {
-  return src(['./src/iconfont/**/*', './src/iconfont/*'])
-  .pipe(dest('./dist/preview/iconfont'))
-}
-
-function transferFonts() {
-  return src('./src/fonts/*')
-  .pipe(dest('./dist/preview/fonts'))
-}
-
-function transferImages() {
-  return src('./src/images/*')
-  .pipe(dest('./dist/preview/images'))
-}
-
-exports.default = function() {
+const task = process.env.NODE_ENV == 'production' ? 
+  parallel(uglifyJs, minfyCss, minify, assetsTransfer) : function dev() {
   browserSync.init({
     server: "./dist/preview",
   })
-
-
+  
   watch(['./src/pug/*.pug','./src/pug/**/*.pug'], pug2html)
   watch(['./src/js/*.js','./src/js/**/*.js'], transferJs)
   watch(['./src/iconfont/**/*', './src/iconfont/*'], transferIconfont)
@@ -40,3 +22,5 @@ exports.default = function() {
     cb()
   })
 }
+
+exports.default = task
