@@ -17,6 +17,9 @@
   .left-part {
     width: 440px;
     color: $blue;
+    @media screen and (max-width: $sm-max){
+      width: 100%;
+    }
     .subtitle {
       font-family: $f-am;
       font-weight: 700;

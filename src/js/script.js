@@ -4,6 +4,7 @@
         var flag = false
         var $expandMenu = $('.expand-menu')
         var $responsiveMenu = $('.responsive-menus')
+        var $loader = $('.loader')
     
         function removeActive() {
             $expandMenu.removeClass('active')
@@ -46,5 +47,9 @@
         new WOW().init({
             animateClass: "animate__animated" 
         })
+
+        window.onload = function() {
+            $loader.remove()
+        }
     })
 })(jQuery, window)
